@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/Scenes/NH_BaseLevel.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0

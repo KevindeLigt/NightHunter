@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\playerweaponslocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\playerweaponslocal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\weaponlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\weaponlibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\weapondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\weapondata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\weaponenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\weaponenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WeaponData.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponData.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\WeaponData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T17:57:25.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeaponLibrary.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponLibrary.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponLibrary.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponLibrary.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\WeaponLibrary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T17:57:23.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerWeaponsLocal.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\PlayerWeaponsLocal.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\PlayerWeaponsLocal.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\PlayerWeaponsLocal.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\PlayerWeaponsLocal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T17:57:14.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WeaponEnums.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponEnums.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponEnums.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponEnums.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\WeaponEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-18T17:56:15.197Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
