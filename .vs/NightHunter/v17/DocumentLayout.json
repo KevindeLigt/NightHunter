@@ -3,7 +3,35 @@
   "WorkspaceRootPath": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\weaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\combat\\skillcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\skillcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\ui\\skillhud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\skillhud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\combat\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\combat\\skilldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\skilldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\combat\\skillenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\skillenums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\combat\\skilllibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\skilllibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\ui\\hudstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\hudstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\combat\\weaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\weaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,24 +54,109 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SkillHud.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\UI\\SkillHud.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\SkillHud.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\UI\\SkillHud.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\SkillHud.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA2wEIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T17:19:05.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SkillController.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\SkillController.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\SkillController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowLAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T17:09:43.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SkillLibrary.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillLibrary.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\SkillLibrary.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillLibrary.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\SkillLibrary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T17:09:14.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SkillData.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillData.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\SkillData.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillData.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\SkillData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T17:09:00.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SkillEnums.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillEnums.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\SkillEnums.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\SkillEnums.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\SkillEnums.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T17:08:48.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HUDStatus.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\UI\\HUDStatus.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\HUDStatus.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\UI\\HUDStatus.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\HUDStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T16:18:39.925Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Health.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\Health.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\Health.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-19T16:18:06.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "WeaponController.cs",
               "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponController.cs",
               "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponController.cs",
               "RelativeToolTip": "Assets\\Scripts\\Combat\\WeaponController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAqwFYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAMMAAAAAAAAAAAAiwNIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T11:44:47.193Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T11:44:47.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "WeaponData.cs",
               "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponData.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponData.cs",
@@ -51,12 +164,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Combat\\WeaponData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T17:57:25.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T17:57:25.843Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "WeaponLibrary.cs",
               "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponLibrary.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponLibrary.cs",
@@ -68,7 +180,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "WeaponEnums.cs",
               "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponEnums.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponEnums.cs",

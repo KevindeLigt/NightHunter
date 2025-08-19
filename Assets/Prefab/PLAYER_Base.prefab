@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 1801175402066886495}
   - component: {fileID: 2472749139694817397}
   - component: {fileID: 7285668059569571838}
+  - component: {fileID: 2914843631759809117}
   m_Layer: 0
   m_Name: PLAYER_Base
   m_TagString: Player
@@ -223,9 +224,30 @@ MonoBehaviour:
   weaponAnimator: {fileID: 0}
   audioSource: {fileID: 0}
   weaponSlot: {fileID: 2953430344617292273}
+  showShotLine: 1
+  shotLineSeconds: 0.06
+  shotLineWidth: 0.02
   activeWeapon: 1
   defaultReserveAmmo: 90
   meleeRadius: 0.6
+--- !u!114 &2914843631759809117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218355789549086547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1bcf569915ceab47ae4464864cb3eb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  aimCamera: {fileID: 0}
+  cc: {fileID: 0}
+  weaponSlotOrRoot: {fileID: 0}
+  slot1: 2
+  slot2: 3
+  slot3: 0
 --- !u!1 &5549460108784516485
 GameObject:
   m_ObjectHideFlags: 0

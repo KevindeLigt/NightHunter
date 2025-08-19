@@ -18,7 +18,14 @@ namespace NightHunter.combat
         [SerializeField] private Transform firePoint;       // muzzle; default to camera transform
         [SerializeField] private Animator weaponAnimator;   // animator on the held weapon prefab (optional)
         [SerializeField] private AudioSource audioSource;   // optional, plays fire/reload SFX
-        [SerializeField] private Transform weaponSlot;  // assign the WeaponSlot under the camera
+        [SerializeField] private Transform weaponSlot;  // assign the WeaponSlot under the camera\
+
+        [Header("Debug Shot Line (optional)")]
+        [SerializeField] private bool showShotLine = true;
+        [SerializeField] private float shotLineSeconds = 0.06f;
+        [SerializeField] private float shotLineWidth = 0.02f;
+
+
         private GameObject _viewInstance;               // current spawned view
 
 
@@ -141,9 +148,19 @@ namespace NightHunter.combat
             if (wd.fireSfx) PlayOneShot(wd.fireSfx);
             if (wd.muzzleFxPrefab) Instantiate(wd.muzzleFxPrefab, firePoint.position, firePoint.rotation, firePoint);
 
-            // Route by kind
-            Vector3 origin = firePoint.position + firePoint.forward * 0.25f;
-            Vector3 dir = firePoint.forward;
+            // Aim from the center of the screen
+            Ray aimRay = aimCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+            float aimRange = Mathf.Max(0.01f, wd.range > 0f ? wd.range : 100f);
+
+            // Find a point we're aiming at (hit or far point)
+            Vector3 aimPoint = aimRay.GetPoint(aimRange);
+            if (Physics.Raycast(aimRay, out var aimHit, aimRange, ~0, QueryTriggerInteraction.Ignore))
+                aimPoint = aimHit.point;
+
+            // Now build shot from our muzzle toward that point
+            Vector3 origin = firePoint.position;
+            Vector3 dir = (aimPoint - origin).normalized;
+
 
             switch (wd.kind)
             {
@@ -220,15 +237,20 @@ namespace NightHunter.combat
             if (Physics.Raycast(ray, out var hit, dist, ~0, QueryTriggerInteraction.Collide))
             {
                 ApplyDamage(hit.collider, wd.damage);
-#if UNITY_EDITOR
-                Debug.DrawRay(hit.point, hit.normal * 0.3f, Color.red, 0.35f);
-#endif
+                ShowShotLine(origin, hit.point, Color.green);   // HIT = green
             }
+            else
+            {
+                var end = origin + dir * dist;
+                ShowShotLine(origin, end, Color.red);           // MISS = red
+            }
+
 
 #if UNITY_EDITOR
             Debug.DrawRay(origin, dir * dist, Color.yellow, 0.05f);
 #endif
         }
+
 
         private void DoMelee(WeaponData wd, Vector3 origin, Vector3 dir)
         {
@@ -279,5 +301,21 @@ namespace NightHunter.combat
             else
                 AudioSource.PlayClipAtPoint(clip, firePoint ? firePoint.position : transform.position, 0.9f);
         }
+
+        private void ShowShotLine(Vector3 start, Vector3 end, Color color)
+        {
+            if (!showShotLine) return;
+            var go = new GameObject("ShotLineTemp");
+            var lr = go.AddComponent<LineRenderer>();
+            lr.positionCount = 2;
+            lr.SetPosition(0, start);
+            lr.SetPosition(1, end);
+            lr.startWidth = lr.endWidth = shotLineWidth;
+            lr.material = new Material(Shader.Find("Sprites/Default"));
+            lr.startColor = lr.endColor = color;
+            Destroy(go, shotLineSeconds);
+        }
+
+
     }
 }

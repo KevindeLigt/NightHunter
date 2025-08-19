@@ -17,15 +17,15 @@ MonoBehaviour:
   kind: 1
   icon: {fileID: 21300000, guid: b74c31d447d2f5d41a61081bdf5e7126, type: 3}
   viewPrefab: {fileID: 5015725570598239320, guid: c9c424a59f0f3c04ca0db1127fd0f38c, type: 3}
-  damage: 25
-  fireCooldown: 0.1
+  damage: 35
+  fireCooldown: 0.75
   reloadTime: 2
-  range: 4
+  range: 20
   usesAmmo: 1
   clipSize: 15
   maxReserveAmmo: 30
-  projectilePrefab: {fileID: 6737696174327261522, guid: 29faa5031bedfd14c92c9423d34f2d1c, type: 3}
-  projectileSpeed: 35
+  projectilePrefab: {fileID: 673168288027737242, guid: 3c1fa96f86274e24292b4319c9f9f749, type: 3}
+  projectileSpeed: 1
   projectileLifetime: 1
   fireSfx: {fileID: 0}
   reloadSfx: {fileID: 0}
