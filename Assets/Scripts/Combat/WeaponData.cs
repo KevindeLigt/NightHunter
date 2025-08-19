@@ -11,6 +11,10 @@ namespace NightHunter.combat
         public WeaponKind kind = WeaponKind.Ranged;
         public Sprite icon;
 
+        [Header("View (held model)")]
+        public GameObject viewPrefab;   // the in-hand model with an Animator + a child "Muzzle"
+
+
         [Header("Core Stats")]
         public int damage = 20;
         public float fireCooldown = 0.25f;

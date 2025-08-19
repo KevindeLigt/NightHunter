@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d248285161759e4418415be92f367de6, type: 3}
   m_Name: WPN_Crossbow
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
   displayName: Crossbow
   kind: 0
   icon: {fileID: 1169110369, guid: f65915c272ef9854c8779e61381af92d, type: 3}
