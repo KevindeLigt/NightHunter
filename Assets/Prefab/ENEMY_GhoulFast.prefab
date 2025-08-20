@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be9ea3306a8059b4881fb3017ff06361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
+  maxHP: 125
 --- !u!114 &-2218034181302048989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb7ec30d1936cd40bbdfcdc6c47ab84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectRange: 18
+  detectRange: 32
   fovAngle: 120
   lostSightTime: 2
   stopDistance: 1.8

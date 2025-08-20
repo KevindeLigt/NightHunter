@@ -371,6 +371,8 @@
 "Assets/Scripts/Enemy/EnemyConfig.cs"
 "Assets/Scripts/Enemy/KnockbackReceiver.cs"
 "Assets/Scripts/Enemy/WaveSpawner.cs"
+"Assets/Scripts/Gameplay/GameDirector.cs"
+"Assets/Scripts/Gameplay/StreetModule.cs"
 "Assets/Scripts/Player/FirstPersonController.cs"
 "Assets/Scripts/Skills/AbilityCore.cs"
 "Assets/Scripts/Skills/AbilityLibrary.cs"
