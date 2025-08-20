@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73badad00d45b67498975b6ff29fa210, type: 3}
+  m_Name: SK_HolyExplosion
+  m_EditorClassIdentifier: 
+  id: 3
+  displayName: Holy Explosion
+  icon: {fileID: 21300000, guid: 4baf6e1f4bedab94b9b41b99844169b9, type: 3}
+  targeting: {fileID: 11400000, guid: c264e9434b43ec345bf271cd0e31e469, type: 2}
+  delivery: {fileID: 11400000, guid: 1b5132ababec89a4281621511c37bb97, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 06de924d4abd7c748b995bb954f9498e, type: 2}
+  cooldown: 8

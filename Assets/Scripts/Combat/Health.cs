@@ -14,12 +14,13 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
-        // Let skills modify incoming damage (shield, etc.)
+        // at the top of TakeDamage(int dmg)
         foreach (var mod in GetComponents<NightHunter.combat.IDamageModifier>())
             dmg = mod.ModifyIncomingDamage(dmg);
 
-        // allow full block: use Max(0, dmg) not Max(1, dmg)
+        // then subtract:
         hp -= Mathf.Max(0, dmg);
+
         if (hp <= 0) Die();
     }
 
