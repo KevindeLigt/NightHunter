@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\gameplay\\gamedirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\gamedirector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\ui\\hudstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\hudstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\gameplay\\streetmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\streetmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\enemy\\enemyconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemyconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\combat\\weaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\combat\\weaponcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\enemy\\enemybrainnav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\enemybrainnav.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|d:\\portfolio\\game_nighthunter\\nighthunter\\assets\\scripts\\gameplay\\shopkeeper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\shopkeeper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\gameplay\\enemylootdrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\enemylootdrop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\gameplay\\bloodmoneypickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\bloodmoneypickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|D:\\Portfolio\\Game_NightHunter\\NightHunter\\assets\\scripts\\gameplay\\currencywallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DC95FF-8446-0C9E-7312-6EE8F043FB0B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gameplay\\currencywallet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,57 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StreetModule.cs",
-              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\StreetModule.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\StreetModule.cs",
-              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\StreetModule.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\StreetModule.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T14:41:53.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameDirector.cs",
-              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\GameDirector.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\GameDirector.cs",
-              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\GameDirector.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\GameDirector.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAiwDoAAAANAAAAAAAAAA==",
+              "Title": "HUDStatus.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\UI\\HUDStatus.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\HUDStatus.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\UI\\HUDStatus.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\HUDStatus.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T14:41:37.927Z",
+              "WhenOpened": "2025-08-21T12:05:27.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "EnemyConfig.cs",
-              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Enemy\\EnemyConfig.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyConfig.cs",
-              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Enemy\\EnemyConfig.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyConfig.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABVAAAAAAAAAA==",
+              "Title": "WeaponController.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\WeaponController.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\WeaponController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\WeaponController.cs",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAmwC4BAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T13:08:22.329Z"
+              "WhenOpened": "2025-08-21T12:04:25.358Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EnemyBrainNav.cs",
-              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Enemy\\EnemyBrainNav.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\EnemyBrainNav.cs",
-              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Enemy\\EnemyBrainNav.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Enemy\\EnemyBrainNav.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAQwD0AAAAAAAAAAAAAAA==",
+              "Title": "Shopkeeper.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\Shopkeeper.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\Shopkeeper.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\Shopkeeper.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\Shopkeeper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T12:51:50.578Z"
+              "WhenOpened": "2025-08-21T12:04:00.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Health.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\Health.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Combat\\Health.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Combat\\Health.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Combat\\Health.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T12:02:18.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnemyLootDrop.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\EnemyLootDrop.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\EnemyLootDrop.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\EnemyLootDrop.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\EnemyLootDrop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T12:01:07.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BloodMoneyPickup.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\BloodMoneyPickup.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\BloodMoneyPickup.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\BloodMoneyPickup.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\BloodMoneyPickup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T12:00:23.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CurrencyWallet.cs",
+              "DocumentMoniker": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\CurrencyWallet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Gameplay\\CurrencyWallet.cs",
+              "ToolTip": "D:\\Portfolio\\Game_NightHunter\\NightHunter\\Assets\\Scripts\\Gameplay\\CurrencyWallet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Gameplay\\CurrencyWallet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T11:57:20.316Z"
             }
           ]
         }

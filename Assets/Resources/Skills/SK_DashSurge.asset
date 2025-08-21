@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Dash
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   targeting: {fileID: 11400000, guid: 21e7f24b1b67e9046bd36508a13595fb, type: 2}
-  delivery: {fileID: 11400000, guid: cb1eadede60235244910e6106a532b98, type: 2}
+  delivery: {fileID: 11400000, guid: 53627c9fa2b5da84bbb31d419b7f4a4a, type: 2}
   effects:
   - {fileID: 11400000, guid: 3c79b0b6d36d621429ad14fbb38e39d7, type: 2}
   cooldown: 8

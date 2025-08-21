@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: T_AimPoint 1
   m_EditorClassIdentifier: Assembly-CSharp:NightHunter.combat:TargetingAimPointSO
-  maxRange: 60
+  maxRange: 30
   snapToHit: 1

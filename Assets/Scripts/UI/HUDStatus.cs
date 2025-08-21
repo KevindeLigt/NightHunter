@@ -12,6 +12,7 @@ public class HUDStatus : MonoBehaviour
     [SerializeField] private TMP_Text weaponText;
     [SerializeField] private TMP_Text ammoText;
     [SerializeField] private TMP_Text hpText;
+    [SerializeField] TMP_Text moneyText; // assign in Inspector
 
     void Update()
     {
@@ -41,4 +42,10 @@ public class HUDStatus : MonoBehaviour
             hpText.text = $"{playerHealth.CurrentHP}/{playerHealth.MaxHP}";
         }
     }
+
+    void OnEnable() { NightHunter.combat.CurrencyWallet.OnChanged += UpdateMoney; UpdateMoney(NightHunter.combat.CurrencyWallet.Balance); }
+    void OnDisable() { NightHunter.combat.CurrencyWallet.OnChanged -= UpdateMoney; }
+    void UpdateMoney(int bal) { if (moneyText) moneyText.text = $"🩸 {bal}"; }
+
+
 }

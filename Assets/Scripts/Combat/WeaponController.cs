@@ -301,6 +301,21 @@ namespace NightHunter.combat
             else
                 AudioSource.PlayClipAtPoint(clip, firePoint ? firePoint.position : transform.position, 0.9f);
         }
+        public void AddReserve(WeaponId id, int amount)
+        {
+            if (amount <= 0) return;
+            var wd = WeaponLibrary.Get(id);
+            if (wd == null || !wd.usesAmmo) return;
+
+            // ensure entry exists
+            var has = _ammo.TryGetValue(id, out var st);
+            if (!has) { EnsureAmmoEntry(id); _ammo.TryGetValue(id, out st); }
+
+            st.reserve += amount;
+            _ammo[id] = st;
+        }
+
+
 
         private void ShowShotLine(Vector3 start, Vector3 end, Color color)
         {

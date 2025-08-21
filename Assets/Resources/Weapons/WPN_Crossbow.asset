@@ -27,6 +27,6 @@ MonoBehaviour:
   projectilePrefab: {fileID: 673168288027737242, guid: 3c1fa96f86274e24292b4319c9f9f749, type: 3}
   projectileSpeed: 25
   projectileLifetime: 5
-  fireSfx: {fileID: 8300000, guid: ed410884f37ce3f46afe715f142d3ec3, type: 3}
+  fireSfx: {fileID: 8300000, guid: 827fbc5a82ed6d149bf63fc41d1c6300, type: 3}
   reloadSfx: {fileID: 0}
   muzzleFxPrefab: {fileID: 0}

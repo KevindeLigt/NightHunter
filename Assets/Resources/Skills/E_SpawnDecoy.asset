@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: E_SpawnDecoy
   m_EditorClassIdentifier: Assembly-CSharp:NightHunter.combat:EffectSpawnDecoySO
-  decoyPrefab: {fileID: 0}
+  decoyPrefab: {fileID: 851929738502423347, guid: 88cd8b6eff87f9a47bc585fd5af7f909, type: 3}
   lifetime: 3
