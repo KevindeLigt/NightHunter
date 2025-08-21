@@ -9,6 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8396b8b1be14318439a59bd7e9e3683f, type: 3}
+  m_Script: {fileID: 0}
   m_Name: E_Shield
   m_EditorClassIdentifier: Assembly-CSharp:NightHunter.combat:EffectShieldSO
+  absorb: 60
+  reducePct: 0.3
+  maxHits: 0
+  duration: 5

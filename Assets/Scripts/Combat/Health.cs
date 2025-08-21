@@ -26,6 +26,12 @@ public class Health : MonoBehaviour
         if (hp <= 0) Die();
     }
 
+    public void Heal(int amount)
+    {
+        if (isDead) return;
+        hp = Mathf.Min(maxHP, hp + Mathf.Max(0, amount));
+    }
+
     private void Die()
     {
         if (isDead) return; // safety
@@ -33,4 +39,5 @@ public class Health : MonoBehaviour
         OnDeath?.Invoke();
         Destroy(gameObject);
     }
+
 }

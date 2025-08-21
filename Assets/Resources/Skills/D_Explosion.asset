@@ -9,15 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b2d171a20585074b9e85e7c71a7122e, type: 3}
+  m_Script: {fileID: 0}
   m_Name: D_Explosion
-  m_EditorClassIdentifier: 
-  radius: 8
+  m_EditorClassIdentifier: Assembly-CSharp:NightHunter.combat:DeliveryExplosionSO
+  radius: 5
   requireLineOfSight: 0
   losPadding: 0.1
-  fuseSeconds: 0.5
-  pulses: 2
-  pulseInterval: 1
-  vfxPrefab: {fileID: 673168288027737242, guid: 3c1fa96f86274e24292b4319c9f9f749, type: 3}
+  fuseSeconds: 0
+  pulses: 1
+  pulseInterval: 0.25
+  vfxPrefab: {fileID: 0}
   sfx: {fileID: 0}
   vfxLifetime: 3
+  debugDraw: 1
+  debugColor: {r: 1, g: 0.6, b: 0, a: 1}
+  debugSegments: 48
+  debugPreviewSeconds: 0

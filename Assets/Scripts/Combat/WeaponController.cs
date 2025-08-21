@@ -25,6 +25,9 @@ namespace NightHunter.combat
         [SerializeField] private float shotLineSeconds = 0.06f;
         [SerializeField] private float shotLineWidth = 0.02f;
 
+        [Header("Starting Loadout")]
+        [SerializeField] private WeaponId[] startingWeapons;
+
 
         private GameObject _viewInstance;               // current spawned view
 
@@ -43,6 +46,8 @@ namespace NightHunter.combat
         private float _lastFireTime;
         private bool _isReloading;
 
+        private readonly System.Collections.Generic.HashSet<WeaponId> _owned = new();
+
         void Awake()
         {
             if (!aimCamera) aimCamera = Camera.main;
@@ -52,6 +57,16 @@ namespace NightHunter.combat
             EnsureAmmoEntry(activeWeapon);
             Equip(activeWeapon);
 
+            _owned.Clear();
+            if (startingWeapons != null)
+            {
+                foreach (var id in startingWeapons)
+                {
+                    _owned.Add(id);
+                    EnsureAmmoEntry(id); // make sure clip/reserve exists
+                }
+            }
+            _owned.Add(activeWeapon); // keep active weapon owned for sure
         }
 
         void Update()
@@ -329,6 +344,18 @@ namespace NightHunter.combat
             lr.material = new Material(Shader.Find("Sprites/Default"));
             lr.startColor = lr.endColor = color;
             Destroy(go, shotLineSeconds);
+        }
+
+        public bool HasWeapon(WeaponId id) => _owned.Contains(id);
+
+        public void AddWeapon(WeaponId id, int reserve = 0, bool autoEquip = true)
+        {
+            if (!_owned.Contains(id)) _owned.Add(id);
+            var wd = WeaponLibrary.Get(id);
+            if (wd != null && wd.usesAmmo && reserve > 0) AddReserve(id, reserve);
+            // ensure firing will work:
+            // (EnsureAmmoEntry is private; firing path will create entries on demand anyway)
+            if (autoEquip) Equip(id);
         }
 
 

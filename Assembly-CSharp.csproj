@@ -61,11 +61,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemy\KnockbackReceiver.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopItemRow.cs" />
     <Compile Include="Assets\Scripts\Combat\CameraShaker.cs" />
     <Compile Include="Assets\Scripts\Skills\SkillsEnums.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopItemKind.cs" />
     <Compile Include="Assets\Scripts\Gameplay\GameDirector.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\Scripts\UI\BillboardAndScale.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
@@ -95,6 +98,7 @@
     <Compile Include="Assets\Scripts\UI\SkillHud.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopCatalog.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
@@ -102,7 +106,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
-    <Compile Include="Assets\Scripts\Skills\DeliveryExplosionSO.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyConfig.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Player\FirstPersonController.cs" />
@@ -113,16 +116,19 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\Combat\WeaponEnums.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopKeeperOpener.cs" />
     <Compile Include="Assets\Scripts\Combat\WeaponController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Gameplay\BloodMoneyPickup.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopItem.cs" />
     <Compile Include="Assets\Scripts\Combat\WeaponLibrary.cs" />
-    <Compile Include="Assets\Scripts\Skills\EffectDamageSO.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopUI.cs" />
     <Compile Include="Assets\Scripts\Skills\AbilityRunner.cs" />
     <Compile Include="Assets\Scripts\Skills\AbilityCore.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Scripts\UI\ShopStationWorld.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
