@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 1
   displayName: Pistol
   kind: 1
-  icon: {fileID: 21300000, guid: b74c31d447d2f5d41a61081bdf5e7126, type: 3}
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
   viewPrefab: {fileID: 5015725570598239320, guid: c9c424a59f0f3c04ca0db1127fd0f38c, type: 3}
   damage: 35
   fireCooldown: 0.25

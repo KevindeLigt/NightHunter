@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   displayName: Crossbow
   kind: 0
-  icon: {fileID: 1169110369, guid: f65915c272ef9854c8779e61381af92d, type: 3}
+  icon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   viewPrefab: {fileID: 5015725570598239320, guid: 38464efafc977fa42aa5dde129c92f98, type: 3}
   damage: 60
   fireCooldown: 1

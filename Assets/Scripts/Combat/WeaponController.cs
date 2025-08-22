@@ -10,7 +10,6 @@ namespace NightHunter.combat
     /// - Spawns projectile prefab (if set), or raycasts / spherecasts for damage
     /// 
     [RequireComponent(typeof(CharacterController))] // optional but handy for player objects
-
     public class WeaponController : MonoBehaviour
     {
         [Header("Refs")]
@@ -18,7 +17,7 @@ namespace NightHunter.combat
         [SerializeField] private Transform firePoint;       // muzzle; default to camera transform
         [SerializeField] private Animator weaponAnimator;   // animator on the held weapon prefab (optional)
         [SerializeField] private AudioSource audioSource;   // optional, plays fire/reload SFX
-        [SerializeField] private Transform weaponSlot;  // assign the WeaponSlot under the camera\
+        [SerializeField] private Transform weaponSlot;      // assign the WeaponSlot under the camera
 
         [Header("Debug Shot Line (optional)")]
         [SerializeField] private bool showShotLine = true;
@@ -28,9 +27,14 @@ namespace NightHunter.combat
         [Header("Starting Loadout")]
         [SerializeField] private WeaponId[] startingWeapons;
 
+        [Header("Loadout Control")]
+        [SerializeField] private bool manageInternally = true;                 // set FALSE when using WeaponLoadout
+        [SerializeField] private NightHunter.combat.WeaponLoadout loadout;     // optional
+        [SerializeField] private KeyCode swapKey = KeyCode.Q;
+        [SerializeField] private bool mouseWheelSwaps = true;
 
-        private GameObject _viewInstance;               // current spawned view
-
+        [Header("Camera Feel (optional)")]
+        [SerializeField] private CameraFeelDriver cameraFeel;
 
         [Header("Active Weapon")]
         [SerializeField] private WeaponId activeWeapon = WeaponId.Pistol;
@@ -41,21 +45,25 @@ namespace NightHunter.combat
         [Header("Melee Tuning")]
         [SerializeField] private float meleeRadius = 0.6f;  // local helper; WeaponData.range = reach
 
+        private CharacterController _cc;
+        private GameObject _viewInstance;               // current spawned view
+
         private readonly Dictionary<WeaponId, (int clip, int reserve)> _ammo
             = new Dictionary<WeaponId, (int clip, int reserve)>();
         private float _lastFireTime;
         private bool _isReloading;
 
-        private readonly System.Collections.Generic.HashSet<WeaponId> _owned = new();
+        private readonly HashSet<WeaponId> _owned = new();
 
         void Awake()
         {
             if (!aimCamera) aimCamera = Camera.main;
             if (!firePoint && aimCamera) firePoint = aimCamera.transform;
+            if (!loadout) loadout = GetComponent<NightHunter.combat.WeaponLoadout>();
+            if (!_cc) _cc = GetComponent<CharacterController>();
+            if (!cameraFeel && aimCamera) cameraFeel = aimCamera.GetComponent<CameraFeelDriver>();
 
             WeaponLibrary.EnsureLoaded();
-            EnsureAmmoEntry(activeWeapon);
-            Equip(activeWeapon);
 
             _owned.Clear();
             if (startingWeapons != null)
@@ -63,10 +71,19 @@ namespace NightHunter.combat
                 foreach (var id in startingWeapons)
                 {
                     _owned.Add(id);
-                    EnsureAmmoEntry(id); // make sure clip/reserve exists
+                    EnsureAmmoEntry(id);
                 }
             }
-            _owned.Add(activeWeapon); // keep active weapon owned for sure
+
+            EnsureAmmoEntry(activeWeapon);
+
+            if (manageInternally)
+            {
+                // Old behavior: controller picks + equips a starting weapon on its own
+                Equip(activeWeapon);
+                _owned.Add(activeWeapon);
+            }
+            // else: external loadout will call Equip(...) during its own initialization
         }
 
         void Update()
@@ -81,7 +98,16 @@ namespace NightHunter.combat
             // Reload
             if (Input.GetKeyDown(KeyCode.R))
                 TryReload(wd);
+
+            // Swap (only if a loadout is present)
+            if (loadout != null)
+            {
+                if (Input.GetKeyDown(swapKey)) loadout.Swap();
+                if (mouseWheelSwaps && Mathf.Abs(Input.GetAxis("Mouse ScrollWheel")) > 0f) loadout.Swap();
+            }
         }
+
+
         private void SpawnOrSwapView(WeaponData wd)
         {
             // Clean up old
@@ -107,18 +133,17 @@ namespace NightHunter.combat
             }
         }
 
-
-
         // ---- Public surface (for UI/other systems) ----
         public WeaponId ActiveWeaponId => activeWeapon;
         public WeaponData ActiveWeaponData => WeaponLibrary.Get(activeWeapon);
+
         public void Equip(WeaponId id, Animator newAnimator = null)
         {
             activeWeapon = id;
             EnsureAmmoEntry(id);
 
             var wd = WeaponLibrary.Get(id);
-            SpawnOrSwapView(wd);              // <-- add this call
+            SpawnOrSwapView(wd);
 
             // If you pass a manual animator, it overrides the one we find
             if (newAnimator) weaponAnimator = newAnimator;
@@ -126,12 +151,17 @@ namespace NightHunter.combat
             _isReloading = false;
         }
 
-        public bool TryGetAmmo(out int clip, out int reserve)
+        public bool TryGetAmmo(WeaponId id, out int clip, out int reserve)
         {
             (clip, reserve) = (0, 0);
-            if (!_ammo.ContainsKey(activeWeapon)) return false;
-            var st = _ammo[activeWeapon]; clip = st.clip; reserve = st.reserve; return true;
+            if (!_ammo.TryGetValue(id, out var st)) return false;
+            clip = st.clip; reserve = st.reserve;
+            return true;
         }
+
+        // convenience overload for the active weapon
+        public bool TryGetAmmo(out int clip, out int reserve) =>
+            TryGetAmmo(activeWeapon, out clip, out reserve);
 
         // ---- Firing paths ----
         private void TryFire(WeaponData wd)
@@ -163,6 +193,24 @@ namespace NightHunter.combat
             if (wd.fireSfx) PlayOneShot(wd.fireSfx);
             if (wd.muzzleFxPrefab) Instantiate(wd.muzzleFxPrefab, firePoint.position, firePoint.rotation, firePoint);
 
+            // FEEL (triggered on shot, not every frame)
+            if (cameraFeel)
+            {
+                if (wd.kind != WeaponKind.Melee)
+                {
+                    cameraFeel.ShotKick(wd.recoilUp, wd.recoilBack);
+                    if (wd.shotShakeDuration > 0f) cameraFeel.Shake(wd.shotShakeAmplitude, wd.shotShakeDuration);
+                    if (wd.fovPunch > 0f) cameraFeel.FovPunch(wd.fovPunch, wd.fovReturnSpeed);
+                }
+                else
+                {
+                    cameraFeel.Shake(0.2f, 0.05f); // tiny pre-swing rumble
+                }
+            }
+
+            // OPTIONAL: start a short lunge on melee
+            if (wd.kind == WeaponKind.Melee && wd.meleeLungeDistance > 0f)
+                StartCoroutine(MeleeLunge(wd.meleeLungeDistance, wd.meleeLungeTime));
             // Aim from the center of the screen
             Ray aimRay = aimCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             float aimRange = Mathf.Max(0.01f, wd.range > 0f ? wd.range : 100f);
@@ -175,7 +223,6 @@ namespace NightHunter.combat
             // Now build shot from our muzzle toward that point
             Vector3 origin = firePoint.position;
             Vector3 dir = (aimPoint - origin).normalized;
-
 
             switch (wd.kind)
             {
@@ -252,6 +299,13 @@ namespace NightHunter.combat
             if (Physics.Raycast(ray, out var hit, dist, ~0, QueryTriggerInteraction.Collide))
             {
                 ApplyDamage(hit.collider, wd.damage);
+
+                // Impact candy
+                if (wd.impactFxPrefab)
+                    Instantiate(wd.impactFxPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                if (wd.impactSfx)
+                    AudioSource.PlayClipAtPoint(wd.impactSfx, hit.point, 0.9f);
+
                 ShowShotLine(origin, hit.point, Color.green);   // HIT = green
             }
             else
@@ -260,12 +314,10 @@ namespace NightHunter.combat
                 ShowShotLine(origin, end, Color.red);           // MISS = red
             }
 
-
 #if UNITY_EDITOR
             Debug.DrawRay(origin, dir * dist, Color.yellow, 0.05f);
 #endif
         }
-
 
         private void DoMelee(WeaponData wd, Vector3 origin, Vector3 dir)
         {
@@ -275,6 +327,17 @@ namespace NightHunter.combat
             if (Physics.SphereCast(ray, meleeRadius, out var hit, reach, ~0, QueryTriggerInteraction.Collide))
             {
                 ApplyDamage(hit.collider, wd.damage);
+
+                // VFX/SFX
+                if (wd.meleeHitFxPrefab)
+                    Instantiate(wd.meleeHitFxPrefab, hit.point, Quaternion.LookRotation(hit.normal));
+                if (wd.meleeWhooshSfx)
+                    PlayOneShot(wd.meleeWhooshSfx);
+
+                // Camera thump + micro hitstop
+                if (cameraFeel) cameraFeel.Shake(Mathf.Max(0.25f, wd.shotShakeAmplitude), 0.08f);
+                if (wd.meleeHitstop > 0f) StartCoroutine(Hitstop(wd.meleeHitstop));
+
 #if UNITY_EDITOR
                 Debug.DrawRay(hit.point, -dir.normalized * 0.3f, Color.cyan, 0.35f);
 #endif
@@ -316,6 +379,7 @@ namespace NightHunter.combat
             else
                 AudioSource.PlayClipAtPoint(clip, firePoint ? firePoint.position : transform.position, 0.9f);
         }
+
         public void AddReserve(WeaponId id, int amount)
         {
             if (amount <= 0) return;
@@ -329,8 +393,6 @@ namespace NightHunter.combat
             st.reserve += amount;
             _ammo[id] = st;
         }
-
-
 
         private void ShowShotLine(Vector3 start, Vector3 end, Color color)
         {
@@ -353,11 +415,46 @@ namespace NightHunter.combat
             if (!_owned.Contains(id)) _owned.Add(id);
             var wd = WeaponLibrary.Get(id);
             if (wd != null && wd.usesAmmo && reserve > 0) AddReserve(id, reserve);
-            // ensure firing will work:
-            // (EnsureAmmoEntry is private; firing path will create entries on demand anyway)
             if (autoEquip) Equip(id);
         }
 
+        // ---- Feel helpers ----
+        private System.Collections.IEnumerator MeleeLunge(float distance, float time)
+        {
+            if (_cc == null || time <= 0f || distance <= 0f) yield break;
 
+            Vector3 dir = aimCamera ? aimCamera.transform.forward : transform.forward;
+            float speed = distance / time;
+            float t = 0f;
+            while (t < time)
+            {
+                float dt = Time.deltaTime;
+                _cc.Move(dir * speed * dt);
+                t += dt;
+                yield return null;
+            }
+        }
+
+        private bool _hitstopping;
+        private System.Collections.IEnumerator Hitstop(float seconds)
+        {
+            if (_hitstopping || seconds <= 0f) yield break;
+            _hitstopping = true;
+
+            float prev = Time.timeScale;
+            Time.timeScale = 0.12f;  // crunchy but readable
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
+            float elapsed = 0f;
+            while (elapsed < seconds)
+            {
+                elapsed += Time.unscaledDeltaTime;
+                yield return null;
+            }
+
+            Time.timeScale = prev;
+            Time.fixedDeltaTime = 0.02f;
+            _hitstopping = false;
+        }
     }
 }
